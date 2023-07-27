@@ -9,13 +9,14 @@ const Hero = () => {
 
             <div>
                 <h1
-                    className='font-lora font-medium text-[2.88rem]
-                         -tracking-[0.3px] text-white capitalize leading-[52.9px] my-4'>
+                    className='font-lora font-medium text-[2.88rem] md:text-[3.6rem]
+                         -tracking-[0.3px] text-white capitalize leading-[52.9px]
+                          md:leading-[66.7px] my-4'>
                     i'm sam. <br />
                     front-end developer.
                 </h1>
 
-                <p className='font-lexend font-extralight text-xl text-white leading-6'>
+                <p className='text-xl md:text-2xl leading-6 md:leading-[30px] text-white font-lexend font-extralight'>
                     I build User-Interfaces, drink coffee, oh and a music
                     enthusiast.
                 </p>

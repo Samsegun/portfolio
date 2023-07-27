@@ -10,14 +10,26 @@ const Navigation = () => {
     };
 
     return (
-        <nav className='flex justify-between items-center flex-wrap py-4'>
-            <div className='w-32'>
+        <nav className='flex flex-wrap items-center justify-between py-4 md:py-8'>
+            <div className='w-32 md:w-36'>
                 {/* <a href='/'> */}
                 <img src={samsegun} alt='' />
                 {/* </a> */}
             </div>
 
-            <div>
+            <div className='hidden md:block md:basis-[45%] pr-8'>
+                <ul
+                    className='flex justify-between items-center text-white capitalize font-lexend
+                          -tracking-[0.4px]'>
+                    <li>about me</li>
+                    <li>projects</li>
+                    <li className='bg-[#6863FD] px-6 py-3 rounded-lg'>
+                        contact
+                    </li>
+                </ul>
+            </div>
+
+            <div className='md:hidden'>
                 <button type='button' onClick={navHandler}>
                     <img src={navIcon} alt='' />
                 </button>
@@ -26,7 +38,7 @@ const Navigation = () => {
             <div
                 className={`basis-full ${
                     navIsActive ? "h-[15.7rem] opacity-100" : "h-0 opacity-0"
-                } text-center flex items-center justify-center duration-300 transition-all ease-linear`}>
+                } text-center flex items-center justify-center md:hidden duration-300 transition-all ease-linear`}>
                 <ul
                     className='text-white capitalize font-lexend
                          text-sm -tracking-[0.3px]'>
