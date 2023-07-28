@@ -16,3 +16,9 @@
 .project:last-of-type {
     border: none;
 }
+
+@media (min-width: 1024px) {
+    .project:first-of-type {
+        margin-top: 3rem;
+    }
+}

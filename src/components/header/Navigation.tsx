@@ -17,11 +17,13 @@ const Navigation = () => {
                 {/* </a> */}
             </div>
 
-            <div className='hidden md:block md:basis-[45%] pr-8'>
+            <div className='hidden md:block md:basis-[45%] lg:basis-[40%] xl:basis-[30%] pr-8 lg:pr-0'>
                 <ul
                     className='flex justify-between items-center text-white capitalize font-lexend
                           -tracking-[0.4px]'>
-                    <li>about me</li>
+                    <li>
+                        <a href={"/about"}>about me</a>
+                    </li>
                     <li>projects</li>
                     <li className='bg-[#6863FD] px-6 py-3 rounded-lg'>
                         contact

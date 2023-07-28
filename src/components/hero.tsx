@@ -2,7 +2,7 @@ import dp from "../assets/samsegun-fotor-20230726194147.png";
 
 const Hero = () => {
     return (
-        <section className='my-[3.75rem] mx-[5%]'>
+        <section className='my-[3.75rem] mx-[5%] xl:my-24'>
             <span className='block w-28'>
                 <img src={dp} alt='developer profile' />
             </span>
@@ -10,13 +10,14 @@ const Hero = () => {
             <div>
                 <h1
                     className='font-lora font-medium text-[2.88rem] md:text-[3.6rem]
+                    lg:text-[8.7rem]
                          -tracking-[0.3px] text-white capitalize leading-[52.9px]
-                          md:leading-[66.7px] my-4'>
+                          md:leading-[66.7px] lg:leading-[8.9rem] my-4 lg:my-8'>
                     i'm sam. <br />
                     front-end developer.
                 </h1>
 
-                <p className='text-xl md:text-2xl leading-6 md:leading-[30px] text-white font-lexend font-extralight'>
+                <p className='text-xl md:text-2xl lg:text-4xl leading-6 md:leading-[30px] text-[#ffffffcc] font-lexend font-extralight'>
                     I build User-Interfaces, drink coffee, oh and a music
                     enthusiast.
                 </p>

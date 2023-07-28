@@ -25,13 +25,15 @@ const data = [
 
 const Projects = () => {
     return (
-        <section className='text-white font-lexend mx-[5%]'>
-            <h3 className='text-3xl tracking-[-0.4px] mb-4'>Projects</h3>
-            <p className='font-extralight text-xl text-[#ffffffcc] '>
+        <section className='text-white font-lexend mx-[5%] lg:mt-24'>
+            <h3 className='text-3xl lg:text-[2rem] tracking-[-0.4px] mb-4'>
+                Projects
+            </h3>
+            <p className='font-extralight text-xl lg:text-2xl text-[#ffffffcc] '>
                 Here are some projects I've completed.
             </p>
 
-            <div className=''>
+            <div>
                 {data.map((item, idx) => (
                     <React.Fragment key={idx}>
                         <article

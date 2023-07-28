@@ -1,30 +1,21 @@
 import "./App.css";
-import FooterLinks from "./components/FooterLinks";
 import Projects from "./components/Projects";
-import Wrapper from "./components/Wrapper";
-import Navigation from "./components/header/Navigation";
+import Layout from "./components/Layout";
 import Hero from "./components/hero";
 
 function App() {
     return (
         <div className='bg-black'>
-            <Wrapper>
-                <header className='sticky top-0 bg-black'>
-                    <Navigation />
-                </header>
-
+            <Layout>
                 <main>
+                    {/* <div id='detail'>
+                <Outlet />
+            </div> */}
                     <Hero />
 
                     <Projects />
                 </main>
-
-                <footer className='text-[#ffffffcc] mt-16'>
-                    <hr />
-
-                    <FooterLinks />
-                </footer>
-            </Wrapper>
+            </Layout>
         </div>
     );
 }

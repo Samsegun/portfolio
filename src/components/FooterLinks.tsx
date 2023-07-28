@@ -39,7 +39,7 @@ const FooterLinks = () => {
             </div>
 
             <p className='text-sm text-center font-lexend basis-full'>
-                &copy;{new Date().getUTCFullYear()} Samuel Oyebade
+                &copy;{new Date().getUTCFullYear()} Samuel Oyebade.
             </p>
         </div>
     );
