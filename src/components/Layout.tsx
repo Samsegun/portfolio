@@ -1,24 +1,30 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Navigation from "./header/Navigation";
 import FooterLinks from "./FooterLinks";
 
-type LayoutProps = {
-    children: React.ReactNode;
-};
+// type LayoutProps = {
+//     children: React.ReactNode;
+// };
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = () => {
     return (
-        <div className='w-11/12 mx-auto lg:w-4/5 max-w-[1920px] min-h-screen'>
-            <header className='sticky top-0 bg-black'>
-                <Navigation />
-            </header>
-            {children}
+        <div className='bg-black'>
+            <div className='w-11/12 mx-auto lg:w-4/5 max-w-[1920px] min-h-screen'>
+                <header className='sticky top-0 bg-black'>
+                    <Navigation />
+                </header>
 
-            <footer className='text-[#ffffffcc] mt-16'>
-                <hr />
+                <main>
+                    <Outlet />
+                </main>
 
-                <FooterLinks />
-            </footer>
+                <footer className='text-[#ffffffcc] mt-16'>
+                    <hr />
+
+                    <FooterLinks />
+                </footer>
+            </div>
         </div>
     );
 };

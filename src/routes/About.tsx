@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div>
+        <div className='text-white'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
             possimus ullam cupiditate quas officiis, laborum illum
             necessitatibus temporibus optio, hic pariatur minus quos aut eum,

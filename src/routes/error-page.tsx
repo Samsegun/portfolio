@@ -1,6 +1,6 @@
-import { useRouteError } from "react-router-dom";
+import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
-const Error = () => {
+const ErrorPage = () => {
     const error = useRouteError();
     console.error(error);
 
@@ -10,9 +10,11 @@ const Error = () => {
             className='flex items-center justify-center min-h-screen text-2xl text-white font-lexend'>
             <h1>Oops!</h1>
             <p>Sorry, an unexpected error has occurred.</p>
-            <p>{/* <i>{error.statusText || error.message}</i> */}</p>
+            <p>
+                <i>{isRouteErrorResponse(error) && error.statusText}</i>
+            </p>
         </div>
     );
 };
 
-export default Error;
+export default ErrorPage;

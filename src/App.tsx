@@ -1,21 +1,27 @@
+// import { Routes, Route } from "react-router-dom";
 import "./App.css";
+// import Projects from "./components/Projects";
+// import Layout from "./components/Layout";
+// import Hero from "./components/hero";
+// import Home from "./routes/Home";
 import Projects from "./components/Projects";
-import Layout from "./components/Layout";
 import Hero from "./components/hero";
 
 function App() {
     return (
         <div className='bg-black'>
-            <Layout>
-                <main>
-                    {/* <div id='detail'>
-                <Outlet />
-            </div> */}
-                    <Hero />
+            {/* <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<Home />} />
+                </Route>
+            </Routes> */}
+            {/* <Layout> */}
+            {/* <main>
+                <Hero />
 
-                    <Projects />
-                </main>
-            </Layout>
+                <Projects />
+            </main> */}
+            {/* </Layout> */}
         </div>
     );
 }
