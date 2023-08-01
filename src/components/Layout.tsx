@@ -1,5 +1,5 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Navigation from "./header/Navigation";
 import FooterLinks from "./FooterLinks";
 
@@ -8,11 +8,25 @@ import FooterLinks from "./FooterLinks";
 // };
 
 const Layout = () => {
+    const [navIsActive, setNavIsActive] = useState(false);
+    const location = useLocation();
+
+    const navHandler = () => {
+        setNavIsActive(prev => !prev);
+    };
+
+    useEffect(() => {
+        setNavIsActive(false);
+    }, [location]);
+
     return (
         <div className='bg-black'>
             <div className='w-11/12 mx-auto lg:w-4/5 max-w-[1920px] min-h-screen'>
                 <header className='sticky top-0 bg-black'>
-                    <Navigation />
+                    <Navigation
+                        navHandler={navHandler}
+                        navIsActive={navIsActive}
+                    />
                 </header>
 
                 <main>

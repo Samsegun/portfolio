@@ -4,8 +4,6 @@ import "./App.css";
 // import Layout from "./components/Layout";
 // import Hero from "./components/hero";
 // import Home from "./routes/Home";
-import Projects from "./components/Projects";
-import Hero from "./components/hero";
 
 function App() {
     return (

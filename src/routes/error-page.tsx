@@ -1,4 +1,4 @@
-import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { Link, isRouteErrorResponse, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
     const error = useRouteError();
@@ -7,9 +7,14 @@ const ErrorPage = () => {
     return (
         <div
             id='error-page'
-            className='flex items-center justify-center min-h-screen text-2xl text-white font-lexend'>
-            <h1>Oops!</h1>
-            <p>Sorry, an unexpected error has occurred.</p>
+            className='flex flex-col items-center justify-center min-h-screen text-2xl text-white font-lexend'>
+            <h1>Page Not Found</h1>
+            <p className='text-xl'>
+                Go to{" "}
+                <Link to={"/"}>
+                    <span className='underline'>Homepage</span>
+                </Link>
+            </p>
             <p>
                 <i>{isRouteErrorResponse(error) && error.statusText}</i>
             </p>

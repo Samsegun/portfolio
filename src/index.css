@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .heading {
+        @apply font-lora font-medium text-[2.88rem] md:text-[3.6rem]
+        lg:text-[8.7rem]
+             -tracking-[0.3px] text-white capitalize leading-[52.9px]
+              md:leading-[66.7px] lg:leading-[8.9rem] my-4 lg:my-8;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

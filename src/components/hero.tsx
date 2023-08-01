@@ -8,11 +8,7 @@ const Hero = () => {
             </span>
 
             <div>
-                <h1
-                    className='font-lora font-medium text-[2.88rem] md:text-[3.6rem]
-                    lg:text-[8.7rem]
-                         -tracking-[0.3px] text-white capitalize leading-[52.9px]
-                          md:leading-[66.7px] lg:leading-[8.9rem] my-4 lg:my-8'>
+                <h1 className='heading'>
                     i'm sam. <br />
                     front-end developer.
                 </h1>

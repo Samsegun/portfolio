@@ -1,15 +1,14 @@
-import { useState } from "react";
+import { FC } from "react";
 import samsegun from "../../assets/samsegun-logo.png";
 import navIcon from "../../assets/navIcon.svg";
 import { Link } from "react-router-dom";
 
-const Navigation = () => {
-    const [navIsActive, setNavIsActive] = useState(false);
+type NavProps = {
+    navIsActive: boolean;
+    navHandler: () => void;
+};
 
-    const navHandler = () => {
-        setNavIsActive(prev => !prev);
-    };
-
+const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
     return (
         <nav className='flex flex-wrap items-center justify-between py-4 md:py-8'>
             <div className='w-32 md:w-36'>
@@ -34,7 +33,7 @@ const Navigation = () => {
                 </ul>
             </div>
 
-            {/* mobile nav section */}
+            {/* mobile nav section starts here */}
             <div className='md:hidden'>
                 <button type='button' onClick={navHandler}>
                     <img src={navIcon} alt='' />
@@ -74,7 +73,7 @@ const Navigation = () => {
                     </li>
                 </ul>
             </div>
-            {/* mobile nav section */}
+            {/* mobile nav section ends here */}
         </nav>
     );
 };
