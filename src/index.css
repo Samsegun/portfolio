@@ -10,6 +10,9 @@
              -tracking-[0.3px] text-white capitalize leading-[52.9px]
               md:leading-[66.7px] lg:leading-[8.9rem] my-4 lg:my-8;
     }
+    .svg-box {
+        @apply block border-[#ffffff28] border-[1px] w-fit p-2;
+    }
 }
 
 * {
