@@ -4,22 +4,22 @@ const data = [
     {
         img: "src/assets/store2.png",
         title: "Audiophile Store",
-        text: "Tech Stack - html css js",
+        text: "An E-commerce store that meets the needs of audio enthusiasts.",
     },
     {
         img: "src/assets/tracker2.png",
         title: "IP Address Tracker",
-        text: "Tech Stack - html css js react",
+        text: "A Tracker that provides information about an IP Address.",
     },
     {
         img: "src/assets/entertainment.png",
         title: "Entertainent App",
-        text: "Tech Stack - html css js",
+        text: "This app showcases different movies and shows.",
     },
     {
         img: "src/assets/weather.jpeg",
         title: "Open Weather App",
-        text: "Tech Stack - html css js",
+        text: "An app that provides weather-info of over 200,000 cities.",
     },
 ];
 
@@ -38,7 +38,7 @@ const Projects = () => {
                     <React.Fragment key={idx}>
                         <article
                             className='mt-12 pb-8 border-b-[1px] border-[grey] border-opacity-30
-                         md:flex md:items-center md:justify-between project'>
+                         flex flex-col items-center justify-between gap-4 lg:flex-row project'>
                             <div>
                                 <img
                                     src={item.img}
@@ -47,10 +47,13 @@ const Projects = () => {
                                 />
                             </div>
 
-                            <div className='basis-1/2 mt-8 font-lexend text-lg tracking-[-0.3px]'>
-                                <h3 className='md:text-[1.4rem]'>
-                                    {item.title}
-                                </h3>
+                            <h3 className='text-lg font-medium md:text-[1.4rem]'>
+                                {item.title}
+                            </h3>
+
+                            <div
+                                className='basis-1/2 font-lexend text-lg text-center lg:text-left
+                             tracking-[-0.3px]'>
                                 <p className='font-extralight text-[#ffffffcc] '>
                                     {item.text}
                                 </p>

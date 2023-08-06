@@ -29,7 +29,19 @@
     border: none;
 }
 
+form input,
+textarea {
+    width: 100%;
+    padding: 1.25rem;
+    color: #000;
+    border-radius: 5px;
+}
+
 @media (min-width: 1024px) {
+    .project > * {
+        flex-basis: 30%;
+    }
+
     .project:first-of-type {
         margin-top: 3rem;
     }

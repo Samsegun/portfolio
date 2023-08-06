@@ -10,7 +10,7 @@ type NavProps = {
 
 const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
     return (
-        <nav className='flex flex-wrap items-center justify-between py-4 md:py-8'>
+        <nav className='relative flex flex-wrap items-center justify-between py-4 md:py-8'>
             <div className='w-32 md:w-36'>
                 <Link to='/'>
                     <img src={samsegun} alt='' />
@@ -27,8 +27,10 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                     <li>
                         <Link to={"/projects"}>projects</Link>
                     </li>
-                    <li className='bg-[#6863FD] px-6 py-3 rounded-lg'>
-                        <Link to={"/contact"}>contact</Link>
+                    <li className='bg-[#6863FD] rounded-lg'>
+                        <Link to={"/contact"} className='block px-6 py-3'>
+                            contact
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -41,9 +43,10 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
             </div>
 
             <div
-                className={`basis-full ${
-                    navIsActive ? "h-[15.7rem] opacity-100" : "h-0 opacity-0"
-                } text-center flex items-center justify-center md:hidden duration-300 transition-all ease-linear`}>
+                className={`bg-black absolute h-72 left-0 right-0 top-0 -z-10 ${
+                    navIsActive ? "-translate-y-0" : "-translate-y-full"
+                } text-center flex items-center justify-center md:hidden
+                 duration-300 transition-all ease-linear`}>
                 <ul
                     className='text-white capitalize font-lexend
                          text-sm -tracking-[0.3px]'>
@@ -64,12 +67,14 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                         <Link to={"/projects"}>projects</Link>
                     </li>
                     <li
-                        className={`my-8 bg-[#6863FD] px-5 py-2 font-bold rounded-lg tracking-wider ${
+                        className={`my-8 bg-[#6863FD] font-bold rounded-lg tracking-wider ${
                             navIsActive
                                 ? "translate-x-0 scale-100"
                                 : "translate-x-4 scale-125"
                         } duration-700 transition-all ease-linear`}>
-                        <Link to={"/contact"}>contact</Link>
+                        <Link to={"/contact"} className='block px-5 py-2'>
+                            contact
+                        </Link>
                     </li>
                 </ul>
             </div>

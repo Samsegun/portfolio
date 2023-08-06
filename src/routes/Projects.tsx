@@ -4,27 +4,27 @@ const data = [
     {
         img: "src/assets/trendies.png",
         title: "Trendies Shop",
-        text: "Tech Stack - html css js",
+        text: "Trendies is an E-commerce store where users can shop for their essential needs. It showcases clothes, jewelries and electronics. It also has a checkout functionality.",
     },
     {
         img: "src/assets/store2.png",
         title: "Audiophile Store",
-        text: "Tech Stack - html css js",
+        text: "Audiophile is an E-commerce platform that has different range of premium audio equipment. It also provides well-detailed information about available products.",
     },
     {
         img: "src/assets/tracker2.png",
         title: "IP Address Tracker",
-        text: "Tech Stack - html css js react",
+        text: "A Tracker that provides users information such as IP Address, ISP provider, location and so on. The app also utilizes a map for better visuals about current location of an IP Address.",
     },
     {
         img: "src/assets/entertainment.png",
         title: "Entertainent App",
-        text: "Tech Stack - html css js",
+        text: "This app showcases fictional movies and TV shows. It has a log-in, bookmark, search functionality and some fancy animations.",
     },
     {
         img: "src/assets/weather.jpeg",
         title: "Open Weather App",
-        text: "Tech Stack - html css js",
+        text: "An app that enables users search for different cities around the world, providing current weather conditions, such as temperature, humidity, wind speed and so on.",
     },
 ];
 
@@ -35,8 +35,8 @@ const Projects = () => {
                 <h1 className='heading'>Projects</h1>
 
                 <p
-                    className='font-lexend text-[#ffffffcc]
-                 text-sm font-light md:text-base'>
+                    className='md:text-2xl leading-6 md:leading-[30px]
+                    text-[#ffffffcc] font-lexend font-extralight'>
                     Have a look at some of the work I have completed.
                 </p>
             </div>
@@ -47,7 +47,7 @@ const Projects = () => {
                         <React.Fragment key={idx}>
                             <article
                                 className='mt-12 pb-8 border-b-[1px] border-[grey] border-opacity-30
-                         md:flex md:items-center md:justify-between project'>
+                         flex flex-col items-center justify-between gap-4 lg:flex-row project'>
                                 <div>
                                     <img
                                         src={item.img}
@@ -56,13 +56,14 @@ const Projects = () => {
                                     />
                                 </div>
 
+                                <h3 className='text-lg font-medium md:text-[1.4rem]'>
+                                    {item.title}
+                                </h3>
+
                                 <div
-                                    className='basis-1/2 mt-8 font-lexend text-lg
-                                 tracking-[-0.3px] md:text-center'>
-                                    <h3 className='md:text-[1.4rem]'>
-                                        {item.title}
-                                    </h3>
-                                    <p className='font-extralight text-[#ffffffcc] '>
+                                    className='font-lexend text-lg text-center lg:text-left
+                                 tracking-[-0.3px]] md:w-1/2'>
+                                    <p className='font-extralight text-[#ffffffcc] mt-4'>
                                         {item.text}
                                     </p>
                                 </div>
