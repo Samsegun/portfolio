@@ -20,9 +20,9 @@ const Layout = () => {
     }, [location]);
 
     return (
-        <div className='bg-black'>
+        <div className='bg-[#1a1a1a]'>
             <div className='w-11/12 mx-auto lg:w-4/5 max-w-[1920px] min-h-screen'>
-                <header className='sticky top-0 z-20 bg-black'>
+                <header className='sticky top-0 z-20 bg-[#1a1a1a]'>
                     <Navigation
                         navHandler={navHandler}
                         navIsActive={navIsActive}

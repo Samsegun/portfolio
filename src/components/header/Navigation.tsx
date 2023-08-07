@@ -13,7 +13,7 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
         <nav className='relative flex flex-wrap items-center justify-between py-4 md:py-8'>
             <div className='w-32 md:w-36'>
                 <Link to='/'>
-                    <img src={samsegun} alt='' />
+                    <img src={samsegun} alt='' className='' />
                 </Link>
             </div>
 
@@ -43,7 +43,7 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
             </div>
 
             <div
-                className={`bg-black absolute h-72 left-0 right-0 top-0 -z-10 ${
+                className={`bg-[#1a1a1a] absolute h-72 left-0 right-0 top-0 -z-10 ${
                     navIsActive ? "-translate-y-0" : "-translate-y-full"
                 } text-center flex items-center justify-center md:hidden
                  duration-300 transition-all ease-linear`}>

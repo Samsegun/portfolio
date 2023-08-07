@@ -4,7 +4,7 @@ const data = [
     {
         img: "src/assets/trendies.png",
         title: "Trendies Shop",
-        text: "Trendies is an E-commerce store where users can shop for their essential needs. It showcases clothes, jewelries and electronics. It also has a checkout functionality.",
+        text: "Trendies is an E-commerce store where users can shop for their essential needs. It showcases clothes, jewelries and electronics. The payment gateway utilizes the PayStack API.",
     },
     {
         img: "src/assets/store2.png",
