@@ -1,4 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useAnimate } from "framer-motion";
+
+const useProjectAnimation = () => {
+    const [scope, animate] = useAnimate();
+
+    useEffect(() => {
+        animate(".project", { opacity: 1 }, { duration: 2 });
+    }, [animate]);
+
+    return scope;
+};
 
 const data = [
     {

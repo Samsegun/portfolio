@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { motion } from "framer-motion";
 import samsegun from "../../assets/samsegun-logo.png";
 import navIcon from "../../assets/navIcon.svg";
 import { Link } from "react-router-dom";
@@ -10,7 +11,9 @@ type NavProps = {
 
 const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
     return (
-        <nav className='relative flex flex-wrap items-center justify-between py-4 md:py-8'>
+        <nav
+            className='relative flex flex-wrap items-center
+         justify-between py-4 md:py-8'>
             <div className='w-32 md:w-36'>
                 <Link to='/'>
                     <img src={samsegun} alt='' className='' />
@@ -35,13 +38,13 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                 </ul>
             </div>
 
-            {/* mobile nav section starts here */}
-            <div className='md:hidden'>
+            <motion.div whileTap={{ scale: 0.8 }} className='md:hidden'>
                 <button type='button' onClick={navHandler}>
                     <img src={navIcon} alt='' />
                 </button>
-            </div>
+            </motion.div>
 
+            {/* mobile nav section starts here */}
             <div
                 className={`bg-[#1a1a1a] absolute h-72 left-0 right-0 top-0 -z-10 ${
                     navIsActive ? "-translate-y-0" : "-translate-y-full"

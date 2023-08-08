@@ -1,13 +1,27 @@
+import { useEffect } from "react";
+import { useAnimate } from "framer-motion";
 import dp from "../assets/samsegun-fotor-20230726194147.png";
 
+const useHeroAnimation = () => {
+    const [scope, animate] = useAnimate();
+
+    useEffect(() => {
+        animate(".hero", { opacity: 1 }, { duration: 1.5 });
+    }, [animate]);
+
+    return scope;
+};
+
 const Hero = () => {
+    const scope = useHeroAnimation();
+
     return (
-        <section className='my-[3.75rem] mx-[5%] xl:my-24'>
-            <span className='block w-28'>
+        <section className='my-[3.75rem] mx-[5%] xl:my-24' ref={scope}>
+            <span className='block w-28 opacity-0 hero'>
                 <img src={dp} alt='developer profile' />
             </span>
 
-            <div>
+            <div className='opacity-0 hero'>
                 <h1 className='heading'>
                     i'm sam. <br />
                     front-end developer.
