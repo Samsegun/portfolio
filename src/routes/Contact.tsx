@@ -2,6 +2,7 @@ import { FormEvent, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
+import { useFadeAnimation } from "../hooks/FadeAnimation";
 import loadIcon from "../assets/loading.svg";
 
 const Contact = () => {
@@ -12,6 +13,7 @@ const Contact = () => {
         message: "",
     });
     const [isSending, setIsSending] = useState(false);
+    const scope = useFadeAnimation();
 
     const sendEmail = (e: FormEvent) => {
         e.preventDefault();
@@ -44,72 +46,76 @@ const Contact = () => {
     return (
         <>
             <ToastContainer />
-            <section className='text-white my-[3.75rem] xl:my-24 mx-[5%]'>
-                <h1 className='heading'>Say Hello.</h1>
+            <section
+                ref={scope}
+                className='text-white my-[3.75rem] xl:my-24 mx-[5%]'>
+                <div className='opacity-0 fade'>
+                    <h1 className='heading'>Say Hello.</h1>
 
-                <p
-                    className='md:text-2xl leading-6 md:leading-[30px]
+                    <p
+                        className='md:text-2xl leading-6 md:leading-[30px]
              text-[#ffffffcc] font-lexend font-extralight'>
-                    Want to work together? Awesome! Send me a quick message.
-                </p>
+                        Want to work together? Awesome! Send me a quick message.
+                    </p>
 
-                <form
-                    ref={form}
-                    onSubmit={sendEmail}
-                    className='mt-14 flex flex-col gap-4 xl:gap-6'>
-                    <div className='flex flex-col gap-4 xl:flex-row xl:gap-6'>
-                        <input
-                            name='name'
-                            type='text'
-                            placeholder='Full Name'
+                    <form
+                        ref={form}
+                        onSubmit={sendEmail}
+                        className='mt-14 flex flex-col gap-4 xl:gap-6'>
+                        <div className='flex flex-col gap-4 xl:flex-row xl:gap-6'>
+                            <input
+                                name='name'
+                                type='text'
+                                placeholder='Full Name'
+                                required
+                                value={formValues.name}
+                                onChange={e =>
+                                    setFormValues({
+                                        ...formValues,
+                                        name: e.target.value,
+                                    })
+                                }
+                            />
+                            <input
+                                name='email'
+                                type='email'
+                                placeholder='Email Address'
+                                required
+                                value={formValues.email}
+                                onChange={e =>
+                                    setFormValues({
+                                        ...formValues,
+                                        email: e.target.value,
+                                    })
+                                }
+                            />
+                        </div>
+
+                        <textarea
+                            name='message'
+                            placeholder='Please enter your message'
+                            className='h-36'
                             required
-                            value={formValues.name}
+                            value={formValues.message}
                             onChange={e =>
                                 setFormValues({
                                     ...formValues,
-                                    name: e.target.value,
+                                    message: e.target.value,
                                 })
                             }
                         />
-                        <input
-                            name='email'
-                            type='email'
-                            placeholder='Email Address'
-                            required
-                            value={formValues.email}
-                            onChange={e =>
-                                setFormValues({
-                                    ...formValues,
-                                    email: e.target.value,
-                                })
-                            }
-                        />
-                    </div>
 
-                    <textarea
-                        name='message'
-                        placeholder='Please enter your message'
-                        className='h-36'
-                        required
-                        value={formValues.message}
-                        onChange={e =>
-                            setFormValues({
-                                ...formValues,
-                                message: e.target.value,
-                            })
-                        }
-                    />
-
-                    <button
-                        type='submit'
-                        disabled={isSending}
-                        className='p-5 bg-[#6863FD] mt-8 
+                        <button
+                            type='submit'
+                            disabled={isSending}
+                            className='p-5 bg-[#6863FD] mt-8 
                     rounded-md flex justify-center items-center gap-4'>
-                        <span>Get in Touch</span>
+                            <span>Get in Touch</span>
 
-                        {isSending && <img src={loadIcon} alt='loading' />}
-                    </button>
-                </form>
+                            {isSending && <img src={loadIcon} alt='loading' />}
+                        </button>
+                    </form>
+                </div>
             </section>
         </>
     );

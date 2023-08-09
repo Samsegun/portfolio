@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&family=Lora:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&family=Audiowide:wght@400;500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,10 +20,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* .hero {
-    clip-path: inset(10% 50% 90% 50% round 10px);
-} */
 
 .project:first-of-type {
     margin-top: 4rem;

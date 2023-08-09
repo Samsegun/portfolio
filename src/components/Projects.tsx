@@ -1,15 +1,5 @@
-import React, { useEffect } from "react";
-import { useAnimate } from "framer-motion";
-
-const useProjectAnimation = () => {
-    const [scope, animate] = useAnimate();
-
-    useEffect(() => {
-        animate(".project", { opacity: 1 }, { duration: 2 });
-    }, [animate]);
-
-    return scope;
-};
+import { Fragment } from "react";
+import Article from "./Article";
 
 const data = [
     {
@@ -34,6 +24,8 @@ const data = [
     },
 ];
 
+const textStyle = { basis: "basis-1/2" };
+
 const Projects = () => {
     return (
         <section className='text-white font-lexend mx-[5%] lg:mt-24'>
@@ -46,31 +38,9 @@ const Projects = () => {
 
             <div>
                 {data.map((item, idx) => (
-                    <React.Fragment key={idx}>
-                        <article
-                            className='mt-12 pb-8 border-b-[1px] border-[grey] border-opacity-30
-                         flex flex-col items-center justify-between gap-4 lg:flex-row project'>
-                            <div>
-                                <img
-                                    src={item.img}
-                                    alt='audiophile challenge'
-                                    className='rounded-2xl w-[298px] h-[345px]'
-                                />
-                            </div>
-
-                            <h3 className='text-lg font-medium md:text-[1.4rem]'>
-                                {item.title}
-                            </h3>
-
-                            <div
-                                className='basis-1/2 font-lexend text-lg text-center lg:text-left
-                             tracking-[-0.3px]'>
-                                <p className='font-extralight text-[#ffffffcc] '>
-                                    {item.text}
-                                </p>
-                            </div>
-                        </article>
-                    </React.Fragment>
+                    <Fragment key={idx}>
+                        <Article item={item} textStyle={textStyle} />
+                    </Fragment>
                 ))}
             </div>
         </section>

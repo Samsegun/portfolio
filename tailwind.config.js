@@ -4,7 +4,7 @@ export default {
     theme: {
         fontFamily: {
             lexend: ["Lexend", "sans-serif"],
-            lora: ["Lora", "serif"],
+            lora: ["Audiowide", "serif"],
         },
         extend: {
             animation: {
