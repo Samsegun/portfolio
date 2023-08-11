@@ -3,10 +3,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navigation from "./header/Navigation";
 import FooterLinks from "./FooterLinks";
 
-// type LayoutProps = {
-//     children: React.ReactNode;
-// };
-
 const Layout = () => {
     const [navIsActive, setNavIsActive] = useState(false);
     const location = useLocation();
