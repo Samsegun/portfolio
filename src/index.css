@@ -22,11 +22,15 @@
 }
 
 .project:first-of-type {
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .project:last-of-type {
     border: none;
+}
+
+.project-link:hover {
+    transform: scale(1.05);
 }
 
 form input,
@@ -38,11 +42,11 @@ textarea {
 }
 
 @media (min-width: 1024px) {
-    .project > * {
+    .project-link > * {
         flex-basis: 30%;
     }
 
     .project:first-of-type {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 }

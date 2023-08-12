@@ -1,28 +1,8 @@
 import { Fragment } from "react";
 import Article from "./Article";
+import { projectData } from "../appData/projectsInfo";
 
-const data = [
-    {
-        img: "src/assets/store2.png",
-        title: "Audiophile Store",
-        text: "An E-commerce store that meets the needs of audio enthusiasts.",
-    },
-    {
-        img: "src/assets/tracker2.png",
-        title: "IP Address Tracker",
-        text: "A Tracker that provides information about an IP Address.",
-    },
-    {
-        img: "src/assets/entertainment.png",
-        title: "Entertainent App",
-        text: "This app showcases different movies and shows.",
-    },
-    {
-        img: "src/assets/weather.jpeg",
-        title: "Open Weather App",
-        text: "An app that provides weather-info of over 200,000 cities.",
-    },
-];
+const skippedData = projectData.filter((_, idx) => idx !== 0);
 
 const textStyle = { basis: "basis-1/2" };
 
@@ -37,7 +17,7 @@ const Projects = () => {
             </p>
 
             <div>
-                {data.map((item, idx) => (
+                {skippedData.map((item, idx) => (
                     <Fragment key={idx}>
                         <Article item={item} textStyle={textStyle} />
                     </Fragment>
