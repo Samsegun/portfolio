@@ -1,3 +1,4 @@
+import { ScrollToTop } from "../components/ScrollToTop";
 import { useFadeAnimation } from "../hooks/FadeAnimation";
 
 const About = () => {
@@ -119,6 +120,7 @@ const About = () => {
                     </article>
                 </div>
             </div>
+            <ScrollToTop />
         </section>
     );
 };

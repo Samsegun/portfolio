@@ -2,6 +2,7 @@ import React from "react";
 import Article from "../components/Article";
 import { useFadeAnimation } from "../hooks/FadeAnimation";
 import { projectData } from "../appData/projectsInfo";
+import { ScrollToTop } from "../components/ScrollToTop";
 
 const textStyle = { width: "md:w-1/2", mt: "mt-4" };
 
@@ -30,6 +31,8 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
+
+            <ScrollToTop />
         </section>
     );
 };

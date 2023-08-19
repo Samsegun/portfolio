@@ -2,7 +2,7 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 import samsegun from "../../assets/samsegun-logo.png";
 import navIcon from "../../assets/navIcon.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 type NavProps = {
     navIsActive: boolean;
@@ -11,9 +11,7 @@ type NavProps = {
 
 const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
     return (
-        <nav
-            className='relative flex flex-wrap items-center
-         justify-between py-4 md:py-8'>
+        <nav className='relative flex flex-wrap items-center justify-between py-4 md:py-8'>
             <div className='w-32 md:w-36'>
                 <Link to='/'>
                     <img src={samsegun} alt='' className='' />
@@ -25,15 +23,33 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                     className='flex justify-between items-center text-white capitalize font-lexend
                           -tracking-[0.4px]'>
                     <li>
-                        <Link to={"/about"}>about me</Link>
+                        <NavLink
+                            to={"/about"}
+                            className={({ isActive }) =>
+                                (isActive
+                                    ? "border-white border-b-[1px] pb-1"
+                                    : " hover:text-[#ffffffcc]") +
+                                " transition-[border] duration-200 ease-in-out"
+                            }>
+                            about me
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to={"/projects"}>projects</Link>
+                        <NavLink
+                            to={"/projects"}
+                            className={({ isActive }) =>
+                                (isActive
+                                    ? "border-white border-b-[1px] pb-1"
+                                    : " hover:text-[#ffffffcc]") +
+                                " transition-[border] duration-200 ease-in-out "
+                            }>
+                            projects
+                        </NavLink>
                     </li>
-                    <li className='bg-[#6863FD] rounded-lg'>
-                        <Link to={"/contact"} className='block px-6 py-3'>
+                    <li className='bg-[#6863FD] rounded-lg hover:bg-[#7a76ff]'>
+                        <NavLink to={"/contact"} className='block px-6 py-3'>
                             contact
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </div>
@@ -59,7 +75,15 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                                 ? "translate-x-0 scale-100"
                                 : "translate-x-8 scale-125"
                         }  duration-700 transition-all ease-linear`}>
-                        <Link to={"/about"}>about me</Link>
+                        <NavLink
+                            to={"/about"}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "border-white border-b-[1px] pb-1"
+                                    : ""
+                            }>
+                            about me
+                        </NavLink>
                     </li>
                     <li
                         className={`my-8 ${
@@ -67,7 +91,15 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                                 ? "translate-x-0 scale-100"
                                 : "translate-x-6 scale-125"
                         } duration-700 transition-all ease-linear`}>
-                        <Link to={"/projects"}>projects</Link>
+                        <NavLink
+                            to={"/projects"}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "border-white border-b-[1px] pb-1"
+                                    : ""
+                            }>
+                            projects
+                        </NavLink>
                     </li>
                     <li
                         className={`my-8 bg-[#6863FD] font-bold rounded-lg tracking-wider ${

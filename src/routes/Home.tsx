@@ -1,4 +1,5 @@
 import Projects from "../components/Projects";
+import { ScrollToTop } from "../components/ScrollToTop";
 import Hero from "../components/hero";
 
 const Home = () => {
@@ -7,6 +8,8 @@ const Home = () => {
             <Hero />
 
             <Projects />
+
+            <ScrollToTop />
         </>
     );
 };

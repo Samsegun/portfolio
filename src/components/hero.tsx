@@ -6,7 +6,7 @@ const Hero = () => {
 
     return (
         <section className='my-[3.75rem] mx-[5%] xl:my-24' ref={scope}>
-            <span className='block w-28 opacity-0 fade'>
+            <span className='block opacity-0 w-28 fade'>
                 <img src={dp} alt='developer profile' />
             </span>
 

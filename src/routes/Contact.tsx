@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { useFadeAnimation } from "../hooks/FadeAnimation";
 import loadIcon from "../assets/loading.svg";
+import { ScrollToTop } from "../components/ScrollToTop";
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -61,7 +62,7 @@ const Contact = () => {
                     <form
                         ref={form}
                         onSubmit={sendEmail}
-                        className='mt-14 flex flex-col gap-4 xl:gap-6'>
+                        className='flex flex-col gap-4 mt-14 xl:gap-6'>
                         <div className='flex flex-col gap-4 xl:flex-row xl:gap-6'>
                             <input
                                 name='name'
@@ -117,6 +118,7 @@ const Contact = () => {
                     </form>
                 </div>
             </section>
+            <ScrollToTop />
         </>
     );
 };
