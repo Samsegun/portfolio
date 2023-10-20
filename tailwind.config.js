@@ -7,6 +7,9 @@ export default {
             lora: ["Audiowide", "serif"],
         },
         extend: {
+            boxShadow: {
+                navshadow: "0 7px 35px -20px rgba(250, 250, 250, 0.7)",
+            },
             animation: {
                 fadeIn: "fadeIn 0.3s",
             },
