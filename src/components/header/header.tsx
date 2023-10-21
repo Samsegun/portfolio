@@ -23,22 +23,20 @@ const Header = () => {
         setNavIsActive(false);
     }, [location]);
 
-    useEffect(() => {
-        window.addEventListener("scroll", navIsFixed);
+    // useEffect(() => {
+    window.addEventListener("scroll", navIsFixed);
 
-        // clean up might not be necessary because layout never unmounts
-        // for this website
-        return function cleanupListener() {
-            window.removeEventListener("scroll", navIsFixed);
-        };
-    }, []);
+    // clean up might not be necessary because layout never unmounts
+    // for this website
+    //     return function cleanupListener() {
+    //         window.removeEventListener("scroll", navIsFixed);
+    //     };
+    // }, []);
 
     return (
         <div
-            className={`sticky top-0 z-20 bg-[#1a1a1a] transition-all duration-300 ease-in-out ${
-                navShadow
-                    ? "shadow-navshadow py-2 md:py-4"
-                    : "shadow-none py-4 md:py-8"
+            className={`sticky top-0 z-20 bg-[#1a1a1a] transition-all duration-300 ease-in-out py-4 md:py-6 ${
+                navShadow ? "shadow-navshadow" : "shadow-none"
             }`}>
             <header className='w-11/12 mx-auto lg:w-4/5 max-w-[1920px]'>
                 <Navigation navHandler={navHandler} navIsActive={navIsActive} />
