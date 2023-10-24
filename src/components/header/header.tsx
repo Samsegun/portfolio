@@ -23,15 +23,15 @@ const Header = () => {
         setNavIsActive(false);
     }, [location]);
 
-    // useEffect(() => {
-    window.addEventListener("scroll", navIsFixed);
+    useEffect(() => {
+        window.addEventListener("scroll", navIsFixed);
 
-    // clean up might not be necessary because layout never unmounts
-    // for this website
-    //     return function cleanupListener() {
-    //         window.removeEventListener("scroll", navIsFixed);
-    //     };
-    // }, []);
+        // clean up might not be necessary because layout never unmounts
+        // for this website
+        return function cleanupListener() {
+            window.removeEventListener("scroll", navIsFixed);
+        };
+    }, []);
 
     return (
         <div
