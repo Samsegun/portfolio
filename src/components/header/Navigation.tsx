@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
-import samsegun from "../../assets/samsegun-logo.png";
-import navIcon from "../../assets/navIcon.svg";
+import samsegun from "/assets/samsegun-logo.png";
+import navIcon from "/assets/navIcon.svg";
 import { Link, NavLink } from "react-router-dom";
 
 type NavProps = {

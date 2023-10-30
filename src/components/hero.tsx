@@ -1,5 +1,6 @@
 import { useFadeAnimation } from "../hooks/FadeAnimation";
-import dp from "../assets/samsegun-fotor-20230726194147.png";
+import dp from "/assets/samsegun-fotor-20230726194147.png";
+// import dp from "./assets/samsegun-fotor-20230726194147.png";
 
 const Hero = () => {
     const scope = useFadeAnimation();

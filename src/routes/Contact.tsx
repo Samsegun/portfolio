@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { useFadeAnimation } from "../hooks/FadeAnimation";
-import loadIcon from "../assets/loading.svg";
+import loadIcon from "/assets/loading.svg";
 import { ScrollToTop } from "../components/ScrollToTop";
 
 const Contact = () => {
