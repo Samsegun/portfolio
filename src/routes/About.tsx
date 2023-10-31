@@ -11,7 +11,7 @@ const About = () => {
             <div className='opacity-0 fade'>
                 <h1 className='heading'>About Me</h1>
 
-                <p className='font-lexend text-[#ffffffcc]'>
+                <p className='font-lexend text-[#ffffffcc] italic'>
                     I'm a Front End Developer based in Lagos, Nigeria. I'm
                     passionate and creative about what I do and also have a
                     strong desire to bring imagination to life through code.
