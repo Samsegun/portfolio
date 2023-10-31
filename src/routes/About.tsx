@@ -12,7 +12,8 @@ const About = () => {
                 <h1 className='heading'>About Me</h1>
 
                 <p className='font-lexend text-[#ffffffcc]'>
-                    I'm a passionate and creative Front End Developer with a
+                    I'm a Front End Developer based in Lagos, Nigeria. I'm
+                    passionate and creative about what I do and also have a
                     strong desire to bring imagination to life through code.
                     With my technical skills, I thrive on crafting visually
                     stunning and user-friendly websites and web applications.
@@ -28,7 +29,7 @@ const About = () => {
                         Skills
                     </h2>
 
-                    <p className='flex items-center flex-wrap gap-2'>
+                    <p className='flex flex-wrap items-center gap-2'>
                         <span className='svg-box'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
@@ -113,7 +114,7 @@ const About = () => {
                             <div className='flex flex-col gap-4'>
                                 <p>2020 - 2021</p>
 
-                                <p className='flex items-center flex-wrap gap-2'>
+                                <p className='flex flex-wrap items-center gap-2'>
                                     <span className='svg-box'>
                                         <svg
                                             xmlns='http://www.w3.org/2000/svg'

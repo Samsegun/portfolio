@@ -18,7 +18,7 @@ const Hero = () => {
                 </h1>
 
                 <p className='text-xl md:text-2xl lg:text-4xl leading-6 md:leading-[30px] text-[#ffffffcc] font-lexend font-extralight'>
-                    I build User-Interfaces, drink coffee, oh and a music
+                    I build User-Interfaces, an ardent reader, and a music
                     enthusiast.
                 </p>
             </div>
