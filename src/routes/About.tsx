@@ -112,7 +112,7 @@ const About = () => {
                     <article className='pb-8 border-b-[1px] border-[grey] border-opacity-30'>
                         <div className='md:w-2/3 lg:w-1/2'>
                             <div className='flex flex-col gap-4'>
-                                <p>2020 - 2021</p>
+                                <p>Jul 2020 - Nov 2021</p>
 
                                 <p className='flex flex-wrap items-center gap-2'>
                                     <span className='svg-box'>
@@ -167,7 +167,7 @@ const About = () => {
                     <article className='mt-6'>
                         <div className='md:w-2/3 lg:w-1/2'>
                             <div className='flex flex-col gap-4'>
-                                <p>2022 - 2023</p>
+                                <p>Jan 2022 - Sept 2023</p>
 
                                 <p className='flex items-center gap-2'>
                                     <span className='svg-box'>
