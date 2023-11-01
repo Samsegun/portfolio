@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import FooterLinks from "./FooterLinks";
 import Header from "./header/header";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = () => {
     return (
@@ -18,6 +19,7 @@ const Layout = () => {
                     <FooterLinks />
                 </footer>
             </div>
+            <Analytics />
         </div>
     );
 };
