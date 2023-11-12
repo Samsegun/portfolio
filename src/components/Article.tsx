@@ -34,7 +34,7 @@ const Article: FC<ArticleTypes> = ({ item, textStyle }) => {
                 target='_blank'
                 className='flex flex-col items-center justify-between gap-4 lg:flex-row
                  pb-8 transition-all duration-[900ms] project-link'>
-                <div className='pb-6 lg:pb-0'>
+                <div className='pb-5 lg:pb-0'>
                     <img
                         src={item.img}
                         alt={item.title}
