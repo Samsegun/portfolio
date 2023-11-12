@@ -63,7 +63,7 @@ const Contact = () => {
                         ref={form}
                         onSubmit={sendEmail}
                         className='flex flex-col gap-4 mt-14 xl:gap-6'>
-                        <div className='flex flex-col gap-4 xl:flex-row xl:gap-6'>
+                        <div className='mb-5 lg:mb-0 flex flex-col gap-4 xl:flex-row xl:gap-6 '>
                             <input
                                 name='name'
                                 type='text'
@@ -76,6 +76,7 @@ const Contact = () => {
                                         name: e.target.value,
                                     })
                                 }
+                                className='mb-6 lg:mb-0'
                             />
                             <input
                                 name='email'

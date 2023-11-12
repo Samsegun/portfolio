@@ -3,13 +3,13 @@ export const projectData = [
         img: "/assets/trendies.png",
         title: "Trendies Shop",
         link: "https://trendies.vercel.app/",
-        text: "Trendies is an E-commerce store where users can shop for their essential needs. It showcases clothes, jewelries and electronics. The payment gateway utilizes the PayStack API.",
+        text: "Trendies is an E-commerce store where you can shop the latest trends in clothes, jewelry, and electronics. The payment gateway utilizes the PayStack API.",
     },
     {
         img: "/assets/store2.png",
         title: "Audiophile Store",
         link: "https://samsegun-audiophile.netlify.app/",
-        text: "Audiophile is an E-commerce platform that has different range of premium audio equipment. It also provides well-detailed information about available products.",
+        text: "Audiophile is an E-commerce platform that has a wide range of premium audio equipment. It also provides well-detailed information about available products.",
     },
     {
         img: "/assets/tracker2.png",
