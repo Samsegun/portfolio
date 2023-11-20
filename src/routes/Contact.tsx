@@ -19,6 +19,13 @@ const Contact = () => {
     const sendEmail = (e: FormEvent) => {
         e.preventDefault();
 
+        // a necessary check for users who might remove required
+        // attribute on form elements
+        if (!formValues.name && !formValues.email && !formValues.message) {
+            toast.warn("Please enter all values!!");
+            return;
+        }
+
         setIsSending(true);
 
         emailjs
@@ -111,7 +118,8 @@ const Contact = () => {
                             type='submit'
                             disabled={isSending}
                             className='p-5 bg-[#6863FD] mt-8 
-                    rounded-md flex justify-center items-center gap-4'>
+                    rounded-md flex justify-center items-center gap-4'
+                            data-testid='formSubmit'>
                             <span>Get in Touch</span>
 
                             {isSending && <img src={loadIcon} alt='loading' />}
