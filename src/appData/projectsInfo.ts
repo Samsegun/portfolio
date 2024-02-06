@@ -1,5 +1,17 @@
 export const projectData = [
     {
+        img: "/assets/payslice.png",
+        title: "Payslice HQ",
+        link: "https://payslicehq.com/",
+        text: "A technology that allows employers to provide and manage discretionary benefits to their employees.",
+    },
+    {
+        img: "/assets/greyhatcy.jpeg",
+        title: "Greyhat Cybersolutions",
+        link: "https://grey-hat.vercel.app/",
+        text: "Test your website and protect it from hackers using a variety of methods, including page load analysis and web application testing.",
+    },
+    {
         img: "/assets/trendies.png",
         title: "Trendies Shop",
         link: "https://trendies.vercel.app/",
