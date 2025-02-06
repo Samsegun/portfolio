@@ -6,6 +6,18 @@ export const projectData = [
         text: "A technology that allows employers to provide and manage discretionary benefits to their employees.",
     },
     {
+        img: "/assets/betterlyf.jpeg",
+        title: "BetterLyf",
+        link: "https://betterlyf.vercel.app/",
+        text: "Betterlyf is a clinic booking app built using Next.js and Supabase. It allows patients to book appointment with their preferred specialist.",
+    },
+    {
+        img: "/assets/betterlyf-admin.png",
+        title: "BetterLyf-Admin",
+        link: "https://betterlyf-admin.vercel.app",
+        text: "The Betterlyf Admin Panel is a React-based dashboard where admins manage the platform. It connects to Supabase for database operations and authentication.",
+    },
+    {
         img: "/assets/greyhatcy.jpeg",
         title: "Greyhat Cybersolutions",
         link: "https://grey-hat.vercel.app/",

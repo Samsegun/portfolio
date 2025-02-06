@@ -2,12 +2,12 @@ import { Outlet } from "react-router-dom";
 import FooterLinks from "./FooterLinks";
 import Header from "./header/header";
 import { Analytics } from "@vercel/analytics/react";
-import { SnowOverlay } from "react-snow-overlay";
+// import { SnowOverlay } from "react-snow-overlay";
 
 const Layout = () => {
     return (
         <div className='bg-[#1a1a1a]'>
-            <SnowOverlay maxParticles={50} />
+            {/* <SnowOverlay maxParticles={50} /> */}
 
             <Header />
 

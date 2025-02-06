@@ -3,7 +3,7 @@ import Article from "./Article";
 import { projectData } from "../appData/projectsInfo";
 
 const skippedData = projectData.filter(
-    (_, idx) => idx !== 2 && idx !== projectData.length - 1
+    (_, idx) => idx !== 3 && idx !== projectData.length - 1
 );
 
 const textStyle = { basis: "basis-1/2" };
