@@ -1,3 +1,4 @@
+import ResumeLinks from "../components/ResumeLinks";
 import { ScrollToTop } from "../components/ScrollToTop";
 import { useFadeAnimation } from "../hooks/FadeAnimation";
 
@@ -12,14 +13,14 @@ const About = () => {
                 <h1 className='heading'>About Me</h1>
 
                 <p className='font-lexend text-[#ffffffcc] italic'>
-                    I'm a Front End Developer based in Lagos, Nigeria. I'm
-                    passionate and creative about what I do and also have a
-                    strong desire to bring imagination to life through code.
-                    With my technical skills, I thrive on crafting visually
-                    stunning and user-friendly websites and web applications.
-                    I'm not just a developer; I'm a problem solver who aims to
-                    empower businesses and individuals by crafting elegant
-                    solutions through the power of code.
+                    I'm a Front End Developer who is passionate and creative
+                    about what I do and also have a strong desire to bring
+                    imagination to life through code. With my technical skills,
+                    I thrive on crafting visually stunning and user-friendly
+                    websites and web applications. I'm not just a developer; I'm
+                    a problem solver who aims to empower businesses and
+                    individuals by crafting elegant solutions through the power
+                    of code.
                 </p>
 
                 <div className='my-[3.75rem] xl:mt-20'>
@@ -127,6 +128,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+
+                <ResumeLinks />
 
                 <div className='font-lexend my-[3.75rem] xl:mt-10'>
                     <h2

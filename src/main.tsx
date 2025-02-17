@@ -9,6 +9,7 @@ import About from "./routes/About.tsx";
 import Projects from "./routes/Projects.tsx";
 import Contact from "./routes/Contact.tsx";
 import ErrorPage from "./routes/error-page.tsx";
+import Resume from "./routes/Resume.tsx";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <Contact />,
                 // errorElement: <ErrorPage />,
+            },
+            {
+                path: "/resume",
+                element: <Resume />,
             },
             {
                 path: "*",

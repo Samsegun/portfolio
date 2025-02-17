@@ -13,6 +13,9 @@
     .svg-box {
         @apply block border-[#ffffff28] border-[1px] w-fit p-2;
     }
+    .pdf-container {
+        @apply flex flex-col overflow-y-auto lg:overflow-y-hidden lg:w-4/5 mx-auto max-w-[612px] rounded-lg;
+    }
 }
 
 * {
