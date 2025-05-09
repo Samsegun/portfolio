@@ -22,8 +22,8 @@ const ResumeLinks = () => {
                     className='bg-[#6863FD] hover:bg-[#7e7aff] font-lexend rounded-lg tracking-wider
                       duration-150 transition-colors ease-linear'>
                     <a
-                        href='/assets/SAMUEL-OYEBADE-CV.pdf'
-                        download='SAMUEL-OYEBADE-CV.pdf'
+                        href='/assets/Samuel_Oyebade_CV.pdf'
+                        download='SAMUEL_OYEBADE_CV.pdf'
                         className='p-4 inline-block'>
                         Download Resume
                     </a>

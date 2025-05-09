@@ -7,15 +7,15 @@ const Resume = () => {
                 For the best viewing experience, use a desktop or tablet device.
                 You can also{" "}
                 <a
-                    href='/assets/SAMUEL-OYEBADE-CV.pdf'
-                    download='SAMUEL-OYEBADE-CV.pdf'
+                    href='/assets/Samuel_Oyebade_CV.pdf'
+                    download='SAMUEL_OYEBADE_CV.pdf'
                     className='opacity-70 underline'>
                     download the PDF{" "}
                 </a>
                 to view it offline.
             </p>
 
-            <PDFViewer pdfUrl='/assets/SAMUEL-OYEBADE-CV.pdf' />
+            <PDFViewer pdfUrl='/assets/Samuel_Oyebade_CV.pdf' />
         </section>
     );
 };

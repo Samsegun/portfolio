@@ -2,41 +2,36 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import App from "./App.tsx";
-import "./index.css";
 import Layout from "./components/Layout.tsx";
-import Home from "./routes/Home.tsx";
+import "./index.css";
 import About from "./routes/About.tsx";
-import Projects from "./routes/Projects.tsx";
 import Contact from "./routes/Contact.tsx";
 import ErrorPage from "./routes/error-page.tsx";
+import Home from "./routes/Home.tsx";
+import Projects from "./routes/Projects.tsx";
 import Resume from "./routes/Resume.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
-        // errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
                 path: "/",
                 element: <Home />,
-                // errorElement: <ErrorPage />,
             },
             {
                 path: "/about",
                 element: <About />,
-                // errorElement: <ErrorPage />,
             },
             {
                 path: "/projects",
                 element: <Projects />,
-                // errorElement: <ErrorPage />,
             },
             {
                 path: "/contact",
                 element: <Contact />,
-                // errorElement: <ErrorPage />,
             },
             {
                 path: "/resume",
@@ -49,6 +44,8 @@ const router = createBrowserRouter([
         ],
     },
 ]);
+
+// console.log(Home());
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
