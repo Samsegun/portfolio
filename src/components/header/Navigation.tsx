@@ -1,8 +1,8 @@
-import { FC } from "react";
 import { motion } from "framer-motion";
-import samsegun from "/assets/samsegun-logo.png";
-import navIcon from "/assets/navIcon.svg";
+import { FC } from "react";
 import { Link, NavLink } from "react-router-dom";
+import navIcon from "/assets/navIcon.svg";
+import samsegun from "/assets/samsegun-logo.png";
 
 type NavProps = {
     navIsActive: boolean;
@@ -24,7 +24,7 @@ const Navigation: FC<NavProps> = ({ navHandler, navIsActive }) => {
                           -tracking-[0.4px]'>
                     <li>
                         <NavLink
-                            to={"/about"}
+                            to={"/profile"}
                             className={({ isActive }) =>
                                 (isActive
                                     ? "border-white border-b-[1px] pb-1"
