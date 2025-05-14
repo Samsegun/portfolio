@@ -2,7 +2,7 @@ import ResumeLinks from "../components/ResumeLinks";
 import { ScrollToTop } from "../components/ScrollToTop";
 import { useFadeAnimation } from "../hooks/FadeAnimation";
 
-const About = () => {
+const Profile = () => {
     const scope = useFadeAnimation();
 
     return (
@@ -331,4 +331,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Profile;

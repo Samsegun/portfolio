@@ -4,10 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import App from "./App.tsx";
 import Layout from "./components/Layout.tsx";
 import "./index.css";
-import About from "./routes/About.tsx";
 import Contact from "./routes/Contact.tsx";
 import ErrorPage from "./routes/error-page.tsx";
 import Home from "./routes/Home.tsx";
+import Profile from "./routes/Profile.tsx";
 import Projects from "./routes/Projects.tsx";
 import Resume from "./routes/Resume.tsx";
 
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/about",
-                element: <About />,
+                path: "/profile",
+                element: <Profile />,
             },
             {
                 path: "/projects",
